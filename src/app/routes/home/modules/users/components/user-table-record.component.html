@@ -1,8 +1,13 @@
 @for(item of data(); track item.id) {
-  <tr>
-    <td><img src="{{ item.image }}" alt=""></td>
-    <td>{{ item.firstName }}</td>
-    <td>{{ item.lastName }}</td>
-    <td>{{ item.age }}</td>
+  <tr class="">
+    <td class="py-2 align-middle border-b-2">
+      <div class="inline-block h-8 w-8 rounded-full ring-2 ring-blue-500 overflow-hidden">
+
+        <img src="{{ item.image }}" alt="" class="w-full h-full">
+      </div>
+    </td>
+    <td class="py-2 align-middle border-b-2">{{ item.firstName }}</td>
+    <td class="py-2 align-middle border-b-2">{{ item.lastName }}</td>
+    <td class="py-2 align-middle border-b-2">{{ item.age }}</td>
   </tr>
 }

@@ -10,6 +10,7 @@ import { UserListElement } from '../types/user-list-element';
   imports: [
     JsonPipe
   ],
+  host: {'class': 'contents'}
 })
 export class UserTableRecord {
   data = input.required<UserListElement[]>();
