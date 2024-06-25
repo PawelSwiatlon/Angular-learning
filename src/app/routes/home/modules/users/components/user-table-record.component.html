@@ -1,0 +1,8 @@
+@for(item of data(); track item.id) {
+  <tr>
+    <td><img src="{{ item.image }}" alt=""></td>
+    <td>{{ item.firstName }}</td>
+    <td>{{ item.lastName }}</td>
+    <td>{{ item.age }}</td>
+  </tr>
+}

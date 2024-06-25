@@ -3,6 +3,7 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { UsersService } from '../state/users.service';
 import { toSignal } from '@angular/core/rxjs-interop';
+import { UserTableRecord } from '../components/user-table-record.component';
 
 
 
@@ -14,15 +15,11 @@ import { toSignal } from '@angular/core/rxjs-interop';
   imports: [
     RouterOutlet,
     NgClass,
-    JsonPipe
+    JsonPipe,
+    UserTableRecord
   ],
 })
 export class UsersLayoutComponent {
   private _usersService = inject(UsersService);
   usersListQuery = toSignal(this._usersService.queryUsers().result$);
-
-  constructor(){
-    // if(this.usersListQuery()?.isFetching) {
-    // }
-  }
 }
