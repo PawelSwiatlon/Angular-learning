@@ -1,3 +1,15 @@
-<button>
+<a
+  [routerLink]="to()"
+  [queryParams]="queryParams()"
+  [queryParamsHandling]="queryParamsHandling()"
+  [ariaSelected]="isActive()"
+  [tabIndex]="disabled() ? '-1' : '0'"
+  [class]="
+    'flex items-center text-sm'
+    | twMerge
+      : variants[variant()]
+      : (disabled() ? 'pointer-events-none' : '')
+      : className()
+  ">
   <ng-content />
-</button>
+</a>

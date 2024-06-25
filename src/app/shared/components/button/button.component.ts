@@ -2,6 +2,7 @@ import { NgClass } from '@angular/common';
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { Params, QueryParamsHandling, RouterModule } from '@angular/router';
 import { ButtonVariants, buttonVariants } from '../../types/button-variants';
+import { TwMergePipe } from '../../pipes/tw-merge.pipe';
 
 
 @Component({
@@ -11,7 +12,8 @@ import { ButtonVariants, buttonVariants } from '../../types/button-variants';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     RouterModule,
-    NgClass
+    NgClass,
+    TwMergePipe
   ],
 })
 
